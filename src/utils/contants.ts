@@ -1,4 +1,4 @@
-import { StyledTableCellProps } from "@/components/StudentTable/TableComponents";
+
 import { styled, tableCellClasses, TableCell, TableRow, Link, Typography, PaginationProps, IconButton, Tooltip } from "@mui/material";
 const turmas = [
   "Educação Infantil-Turma de 4 e 5 anos",
@@ -237,69 +237,5 @@ export const TituloSecaoStyle = {
   lineHeight: "1.45",
 };
 
-//estilos da tabela
-
-export const StyledDefaultCell = styled(TableCell)(({ theme }) => ({
-  [`&.${tableCellClasses.head}`]: {
-    backgroundColor: theme.palette.common.black,
-    color: theme.palette.common.white,
-    fontSize: 16,
-    minWidth: 100, // Set a minimum width for the header cells
-
-  },
-  [`&.${tableCellClasses.body}`]: {
-    fontSize: 12,
-    minWidth: 100, // Set a minimum width for the body cells
-    cursor: 'pointer'
-  },
-}));
-
-export const StyledEventDateCell = styled(TableCell)(({ theme }) => ({
-  [`&.${tableCellClasses.head}`]: {
-    backgroundColor: theme.palette.common.black,
-    color: theme.palette.common.white,
-    fontSize: 16,
-    maxWidth: 80, // Set a minimum width for the header cells
-
-  },
-  [`&.${tableCellClasses.body}`]: {
-    fontSize: 12,
-    maxWidth: 80, // Set a minimum width for the body cells
-    cursor: 'pointer'
-  },
-  
-}));
-
-
-export const StyledTableRow = styled(TableRow)(({ theme }) => ({
-  "&:nth-of-type(odd)": {
-    backgroundColor: theme.palette.action.hover,
-  },
-  "&:last-child td, &:last-child th": {
-    border: 0,
-    paddingTop: 16,
-    paddingLeft: 16,
-    paddingBottom: 10,
-  },
-}));
-
-export const StyledDocumentCell = styled(TableCell)<StyledTableCellProps>(
-  ({ theme, contentLength }) => ({
-    [`&.${tableCellClasses.head}`]: {
-      backgroundColor: theme.palette.common.black,
-      color: theme.palette.common.white,
-      fontSize: 16,
-    },
-    [`&.${tableCellClasses.body}`]: {
-      fontSize: 12,
-      paddingTop: 16,
-      paddingLeft: 16,
-      paddingBottom: 10,
-    },
-    // Altere para aplicar a regra de quebra de linha para textos com mais de 11 caracteres
-    wordBreak: contentLength > 11 ? 'break-all' : 'normal',
-    minWidth: contentLength > 11 ? '150px' : '100px', // Ajuste a largura mínima com base no comprimento do conteúdo
-  })
-);
 
 
