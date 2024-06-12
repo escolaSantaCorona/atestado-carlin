@@ -18,8 +18,7 @@ export const CreatePdf = async (aluno: AtestadoEscolaridadeInputsProps) => {
       const margin = 40; // Ajuste a margem conforme necessário
       const maxWidth = pageWidth - 2 * margin;
       doc.setFont('helvetica', 'normal');
-
-       // Assume que a imagem está na pasta public do seu projeto Next.js
+//imagem do logo
   const imagePath = 'https://i.ibb.co/JkFZz7j/carlin.jpg'
   const image = new Image();
   image.src = imagePath;
